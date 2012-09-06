@@ -10,15 +10,13 @@ vmc: command not found
 ```
 merci de suivre les étapes suivantes.
 
-1. exécutez `ruby -v` dans votre terminal. Une version en 1.9.x est préférable. 
-   1. si vous n'avez pas ruby, 
-   
-        a. Sur windows : http://www.rubyinstaller.org
-        a. Sur mac, vous devriez avoir ruby. Sinon, https://rvm.io/ permet de maintenir plusieurs runtimes ruby en parallèle
-        a. Sur linux, utilisez par ex `apt` ou bien https://rvm.io/
+1. exécutez `ruby -v` dans votre terminal. Une version en 1.9.x est préférable. Si vous n'avez pas ruby, 
+    a. Sur windows : http://www.rubyinstaller.org
+    a. Sur mac, vous devriez avoir ruby. Sinon, https://rvm.io/ permet de maintenir plusieurs runtimes ruby en parallèle
+    a. Sur linux, utilisez par ex `apt` ou bien https://rvm.io/
 1. exécutez `sudo gem install vmc -V`
 
-###STS
+###SpringSource Tool Suite (STS)
 
 1. Rendez vous à http://www.springsource.org/spring-tool-suite-download
 1. Prendre une version >= 3.0.0
@@ -95,7 +93,18 @@ https://github.com/ericbottard/hands-on-cloudfoundry. Enlevez les commentaires a
 1. Remarquez la valeur de la variable `VCAP_SERVICES`
 
 ###Bonus:
-Faites la même chose en Ruby on Rails, Sinatra, ou node.js
+Faites la même chose en Ruby on Rails, Sinatra, ou node.js.
+
+Indices: Un exemple en Sinatra:
+```ruby
+require 'rubygems'
+require 'sinatra'
+get '/' do
+	s = ''
+	  ENV.each{|k, v| s += "#{k} = #{v}<br>"}
+	s
+end
+```
 
 ##Exercice 5 (15 mins)
 
