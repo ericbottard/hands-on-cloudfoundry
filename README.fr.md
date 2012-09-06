@@ -114,7 +114,7 @@ end
 
 Indices:
 
-- Spring permet de faciliement créer une base embarquée grâce à `EmbeddedDatabaseFactory`
+- Spring permet de facilement créer une base embarquée grâce à `EmbeddedDatabaseFactory`
 
 ###Bonus:
 Loggez ou afficher la classe de la `DataSource` qui vous est injectée. Quelle est la valeur en local? Sur CloudFoundry?
