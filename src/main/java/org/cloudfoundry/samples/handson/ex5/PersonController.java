@@ -6,6 +6,7 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -20,7 +21,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
  * A very basic controller for listing and inserting {@link Person} objects in an RDBMS.
+ *
+ * @author Eric Bottard
+ * @author Florent Biville
+ * 
  * P.S.: don't do this at home ;)
+ *
  */
 @Controller
 public class PersonController {
@@ -30,7 +36,7 @@ public class PersonController {
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
     @Autowired
-    public PersonController(DataSource dataSource) {
+    public PersonController(@Qualifier("fromDataSource") DataSource dataSource) {
         this.dataSource = dataSource;
         jdbcTemplate = new NamedParameterJdbcTemplate(this.dataSource);
     }
