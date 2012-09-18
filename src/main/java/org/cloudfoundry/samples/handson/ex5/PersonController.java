@@ -1,10 +1,5 @@
 package org.cloudfoundry.samples.handson.ex5;
 
-import java.util.List;
-
-import javax.sql.DataSource;
-
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,8 +7,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
+
 /**
- * A very basic controller for listing and inserting {@link Person} objects in an RDBMS. 
+ * A very basic controller for listing and inserting {@link Person} objects in an RDBMS.
+ *
+ * @author Eric Bottard
+ * @author Florent Biville
  */
 @Controller
 public class PersonController {
