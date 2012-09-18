@@ -1,19 +1,18 @@
 package org.cloudfoundry.samples.handson.ex6;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
-import javax.sql.DataSource;
-
 import org.cloudfoundry.samples.handson.ex5.Person;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.sql.DataSource;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * This exercise shows what happens if you have two services of the same "kind"
@@ -22,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
  * on CloudFoundry.
  * 
  * @author Eric Bottard
+ * @author Florent Biville
  * 
  */
 @Controller
@@ -50,10 +50,7 @@ public class CopyController {
 	@RequestMapping(value = "/ex6", method = RequestMethod.GET)
 	public ModelAndView displayDestinationData() {
 		ModelAndView mav = new ModelAndView("ex6-form");
-		Map<String, Object> params = Collections.emptyMap();
-		List<Person> persons = toTemplate.queryForList("select * from Persons",
-				params, Person.class);
-		mav.addObject("persons", persons);
+        mav.addObject("persons", fetchPersons(toTemplate));
 		return mav;
 	}
 
@@ -62,15 +59,20 @@ public class CopyController {
 	 */
 	@RequestMapping(value = "/ex6", method = RequestMethod.POST)
 	public String copy() {
-		Map<String, Object> params = Collections.emptyMap();
-		List<Person> persons = fromTemplate.queryForList(
-				"select * from Persons", params, Person.class);
-		for (Person p : persons) {
+        for (Person person : fetchPersons(fromTemplate)) {
 			toTemplate
 					.update("insert into Persons(firstName, lastName, age) values (:firstName, :lastName, :age)",
-							new BeanPropertySqlParameterSource(p));
+							new BeanPropertySqlParameterSource(person));
 		}
 		return "redirect:/ex6";
 	}
+
+    private List<Person> fetchPersons(NamedParameterJdbcTemplate template) {
+        return template.query(
+                "SELECT firstName, lastName, age FROM Persons", //
+                new HashMap<String, Object>(), //
+                new BeanPropertyRowMapper<Person>(Person.class)
+        );
+    }
 
 }
