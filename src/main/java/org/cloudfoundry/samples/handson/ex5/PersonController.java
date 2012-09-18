@@ -56,7 +56,6 @@ public class PersonController {
                 new BeanPropertySqlParameterSource(person)
         );
 
-        redirectAttributes.addFlashAttribute("justAdded", person);
         return "redirect:/" + EXERCISE_5;
     }
 
