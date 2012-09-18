@@ -37,7 +37,6 @@ public class PersonController {
 		
 		// TODO: save the person POJO in the db using a JdbcTemplate
 		
-		redirectAttributes.addFlashAttribute("justAdded", person);
 		return "redirect:/ex5";
 	}
 

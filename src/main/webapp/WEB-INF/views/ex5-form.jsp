@@ -88,27 +88,17 @@
 </div>
 
 <div class="container">
-    <c:choose>
-        <c:when test="${not empty justAdded}">
-            <div class="alert alert-success">
-                Congrats, <c:out value="${justAdded.firstName}"/> has been added!
-            </div>
-        </c:when>
-        <c:otherwise>
-            <div class="alert alert-info">
-                <p><i class="icon-info-sign"></i> Add a datasource where people can be stored.</p>
+    <div class="alert alert-info">
+        <p><i class="icon-info-sign"></i> Add a datasource where people can be stored.</p>
 
-                <p>
-                    <a href="<c:url value="https://github.com/ericbottard/hands-on-cloudfoundry/blob/master/README.fr.md#exercice-5-15-mins" />"
-                       class="btn btn-primary btn-small"
-                       rel="external">
-                        See exercise 5
-                    </a>
-                </p>
-            </div>
-
-        </c:otherwise>
-    </c:choose>
+        <p>
+            <a href="<c:url value="https://github.com/ericbottard/hands-on-cloudfoundry/blob/master/README.fr.md#exercice-5-15-mins" />"
+               class="btn btn-primary btn-small"
+               rel="external">
+                See exercise 5
+            </a>
+        </p>
+    </div>
 
     <form:form method="post" modelAttribute="person" cssClass="form-horizontal well">
         <legend>Person store</legend>
