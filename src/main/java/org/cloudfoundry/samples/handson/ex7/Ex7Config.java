@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
 @Configuration
-@ImportResource("classpath:context-ex7.xml")
 public class Ex7Config {
 	
 	// Let's stop using @Configuration classes for a while
