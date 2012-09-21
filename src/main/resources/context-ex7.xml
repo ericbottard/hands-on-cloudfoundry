@@ -2,25 +2,18 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:cloud="http://schema.cloudfoundry.org/spring"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://schema.cloudfoundry.org/spring http://schema.cloudfoundry.org/spring/cloudfoundry-spring.xsd">
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+		http://schema.cloudfoundry.org/spring http://schema.cloudfoundry.org/spring/cloudfoundry-spring.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <beans profile="cloud">
-        <!--<cloud:data-source id="fromDataSource" service-name="postgres-src" />-->
-        <!--<cloud:data-source id="toDataSource" service-name="postgres-target" />-->
+        <cloud:data-source id="fromDataSource" service-name="postgres-src" />
+        <cloud:data-source id="toDataSource" service-name="postgres-target" />
     </beans>
 
     <beans profile="default">
-        <bean id="dbSrcFactory" class="org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory">
-            <property name="databaseName" value="hands-on-cf-persons" />
-            <property name="databaseType" value="H2" />
-        </bean>
-        <bean id="toDataSource" factory-bean="dbSrcFactory" factory-method="getDatabase" />
-
-        <bean id="dbTargetFactory" class="org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory">
-            <property name="databaseName" value="hands-on-cf-person-copies" />
-            <property name="databaseType" value="H2" />
-        </bean>
-        <bean id="fromDataSource" factory-bean="dbTargetFactory" factory-method="getDatabase" />
+    	<jdbc:embedded-database type="H2" id="fromDataSource" />
+    	<jdbc:embedded-database type="H2" id="toDataSource" />
     </beans>
 </beans>
