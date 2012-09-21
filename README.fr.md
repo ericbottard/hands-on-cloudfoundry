@@ -11,10 +11,9 @@ vmc: command not found
 merci de suivre les étapes suivantes.
 
 1. exécutez `ruby -v` dans votre terminal. Une version en 1.9.x est préférable. Si vous n'avez pas ruby, 
-
-    a. Sur windows : http://www.rubyinstaller.org
-    a. Sur mac, vous devriez avoir ruby. Sinon, https://rvm.io/ permet de maintenir plusieurs runtimes ruby en parallèle
-    a. Sur linux, utilisez par ex `apt` ou bien https://rvm.io/
+    * Sur windows : http://www.rubyinstaller.org
+    * Sur mac, vous devriez avoir ruby. Sinon, https://rvm.io/ permet de maintenir plusieurs runtimes ruby en parallèle
+    * Sur linux, utilisez par ex `apt` ou bien https://rvm.io/
 1. exécutez `sudo gem install vmc -V`
 
 ###SpringSource Tool Suite (STS)
@@ -127,7 +126,12 @@ Loggez ou affichez la classe de la `DataSource` qui vous est injectée. Quelle e
 1. Ajoutez une deuxième datasource (toujours de type H2)
 2. Modifiez `CopyController` pour qu'il utilise vos deux DataSources.
 3. Déployez en local.
-3. Déployez sur CloudFoundry. Patatras!!
+3. Déployez sur CloudFoundry. Regardez attentivement les logs. Qu'en pensez vous?
+
+Indices:
+
+- Exercez un peu l'application puis arrêtez/redémarrez-là...
+
 
 ###Bonus:
 
