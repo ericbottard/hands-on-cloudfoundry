@@ -11,7 +11,7 @@ import java.util.Arrays;
 import static java.util.Arrays.asList;
 
 @Configuration
-@ImportResource("classpath:context-ex7.xml")
+//@ImportResource("classpath:context-ex7.xml")
 public class Ex7Config {
 
     @Inject
