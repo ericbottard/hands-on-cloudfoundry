@@ -6,15 +6,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Hands On CloudFoundry &middot; exercise 5</title>
+    <title>Hands On CloudFoundry &middot; exercise 6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="css/custom.css"/>
+    <link type="text/css" rel="stylesheet" href="<c:url value='/css/bootstrap.min.css' />">
+    <link type="text/css" rel="stylesheet" href="<c:url value='/css/custom.css'/> "/>
 
-    <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="<c:url value='/js/jquery-1.8.1.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/js/bootstrap.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/js/custom.js' />"></script>
 </head>
 <body>
 
