@@ -90,7 +90,7 @@
 
 <div class="container">
     <div class="alert alert-info">
-        <p><i class="icon-info-sign"></i> Add a datasource where people can be stored.</p>
+        <p><i class="icon-info-sign"></i> Add a first datasource where people can be stored.</p>
 
         <p>
             <a href="<c:url value="https://github.com/ericbottard/hands-on-cloudfoundry/blob/master/README.fr.md#exercice-5-15-mins" />"
@@ -130,7 +130,7 @@
 
         <div class="control-group">
             <div class="controls">
-                <button type="submit" class="btn">Submit</button>
+                <input type="submit" class="btn" value="Send" />
             </div>
         </div>
 

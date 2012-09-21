@@ -62,7 +62,7 @@ public class PersonController {
                 new BeanPropertySqlParameterSource(person)
         );
 
-        return "redirect:/" + EXERCISE_5;
+        return "redirect:" + EXERCISE_5;
     }
 
 }
