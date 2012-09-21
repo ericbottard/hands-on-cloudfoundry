@@ -11,9 +11,9 @@ vmc: command not found
 merci de suivre les étapes suivantes.
 
 1. exécutez `ruby -v` dans votre terminal. Une version en 1.9.x est préférable. Si vous n'avez pas ruby, 
-    a. Sur windows : http://www.rubyinstaller.org
-    a. Sur mac, vous devriez avoir ruby. Sinon, https://rvm.io/ permet de maintenir plusieurs runtimes ruby en parallèle
-    a. Sur linux, utilisez par ex `apt` ou bien https://rvm.io/
+    * Sur windows : http://www.rubyinstaller.org
+    * Sur mac, vous devriez avoir ruby. Sinon, https://rvm.io/ permet de maintenir plusieurs runtimes ruby en parallèle
+    * Sur linux, utilisez par ex `apt` ou bien https://rvm.io/
 1. exécutez `sudo gem install vmc -V`
 
 ###SpringSource Tool Suite (STS)
@@ -84,18 +84,19 @@ Faites
 
 ##Exercice 4 (15 mins)
 
-A partir de l'exercice 4, vous pouvez vous appuyez sur le squelette disponible ici : 
+A partir de l'exercice 4, vous pouvez vous appuyer sur le squelette disponible ici : 
 https://github.com/ericbottard/hands-on-cloudfoundry. Enlevez les commentaires autour du code au fur et à mesure.
 
 1. Ecrire une application web qui liste les variables d’environnement.
+2. Déployez en local puis sur CloudFoundry.
 1. Remarquez les variables nommées `VCAP_*`
-1. Créez et binder un service à votre application (même si elle ne l'exploite pas)
+1. Créez et bindez un service à votre application (même si elle ne l'exploite pas)
 1. Remarquez la valeur de la variable `VCAP_SERVICES`
 
 ###Bonus:
 Faites la même chose en Ruby on Rails, Sinatra, ou node.js.
 
-Indices: Un exemple en Sinatra:
+Indices: Un exemple avec Sinatra:
 ```ruby
 require 'rubygems'
 require 'sinatra'
@@ -109,25 +110,32 @@ end
 ##Exercice 5 (15 mins)
 
 1. Ajoutez une (première) datasource en utilisant une base H2 embarquée (ou autre si vous avez un serveur local).
-2. Modifier le contrôleur `PersonController` afin qu'il écrive dans la base. 
-3. Déployez sur CloudFoundry en utilisant un service PostgreSQL, ça marche tout seul
+2. Modifier le contrôleur `PersonController` afin qu'il écrive dans la base.
+3. Déployez en local.
+3. Déployez sur CloudFoundry en utilisant un service PostgreSQL, ça marche tout seul!
 
 Indices:
 
 - Spring permet de facilement créer une base embarquée grâce à `EmbeddedDatabaseFactory`
 
 ###Bonus:
-Loggez ou afficher la classe de la `DataSource` qui vous est injectée. Quelle est la valeur en local? Sur CloudFoundry?
+Loggez ou affichez la classe de la `DataSource` qui vous est injectée. Quelle est la valeur en local? Sur CloudFoundry?
 
-##Exercice 6
+##Exercice 6 (15 mins)
 
 1. Ajoutez une deuxième datasource (toujours de type H2)
 2. Modifiez `CopyController` pour qu'il utilise vos deux DataSources.
-3. Déployez sur CloudFoundry. Patatras!!
+3. Déployez en local.
+3. Déployez sur CloudFoundry. Regardez attentivement les logs. Qu'en pensez vous?
+
+Indices:
+
+- Exercez un peu l'application puis arrêtez/redémarrez-là...
+
 
 ###Bonus:
 
-##Exercice 7
+##Exercice 7 (20 mins)
 
 1. Supprimez les deux datasources ajoutées précédemment (si vous avez bien utilisé `@Configuration`)
 2. Dans le fichier `context-ex7.xml`, déclarez deux profils: `default` et `cloud`

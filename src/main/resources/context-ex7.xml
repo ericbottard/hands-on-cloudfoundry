@@ -5,8 +5,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://schema.cloudfoundry.org/spring http://schema.cloudfoundry.org/spring/cloudfoundry-spring.xsd">
 
+    <beans profile="cloud">
+        <!--<cloud:data-source id="fromDataSource" service-name="postgres-src" />-->
+        <!--<cloud:data-source id="toDataSource" service-name="postgres-target" />-->
+    </beans>
+
     <beans profile="default">
-        <bean class="wtf2"/>
         <bean id="dbSrcFactory" class="org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory">
             <property name="databaseName" value="hands-on-cf-persons" />
             <property name="databaseType" value="H2" />
@@ -18,11 +22,5 @@
             <property name="databaseType" value="H2" />
         </bean>
         <bean id="fromDataSource" factory-bean="dbTargetFactory" factory-method="getDatabase" />
-    </beans>
-    <beans profile="cloud">
-        <bean class="wtf1"/>
-
-        <cloud:data-source id="fromDataSource" service-name="postgres-src" />
-        <cloud:data-source id="toDataSource" service-name="postgres-target" />
     </beans>
 </beans>

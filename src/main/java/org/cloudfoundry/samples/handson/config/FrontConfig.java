@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -25,8 +26,8 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(value = "org.cloudfoundry.samples.handson", excludeFilters = { @Filter(Configuration.class) })
-public class CommonConfig extends WebMvcConfigurerAdapter {
+@ComponentScan(value = "org.cloudfoundry.samples.handson", includeFilters = { @Filter(Controller.class) })
+public class FrontConfig extends WebMvcConfigurerAdapter {
 
 	/**
 	 * Allows controllers to just return a String as a view name, that will be
