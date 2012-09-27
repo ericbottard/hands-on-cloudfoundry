@@ -40,7 +40,7 @@ Dans le menu `Help > About`: vérifier la présence d'une icône CloudFoundry. S
 1. Si vous n'avez pas de mvn installé, STS vous en a installé un
 
 ###Bonus:
-
+Si vous avez déjà téléchargé Micro cloudFoundry, faites le setup dès à présent.
 
 
 ##Exercice 2 (20 mins)
@@ -81,11 +81,13 @@ Faites
  * `vmc help`
 
 ###Bonus:
+ * Jouez un peu avec `vmc files`
+ * Allez voir ce qui se trame dans le dossier WEB-INF...
 
 ##Exercice 4 (15 mins)
 
 A partir de l'exercice 4, vous pouvez vous appuyer sur le squelette disponible ici : 
-https://github.com/ericbottard/hands-on-cloudfoundry. Enlevez les commentaires autour du code au fur et à mesure.
+https://github.com/ericbottard/hands-on-cloudfoundry. Enlevez les commentaires autour du code au fur et à mesure. N'hésitez pas à forker le repo et à twitter vos solutions!
 
 1. Ecrire une application web qui liste les variables d’environnement.
 2. Déployez en local puis sur CloudFoundry.
@@ -132,8 +134,6 @@ Indices:
 
 - Exercez un peu l'application puis arrêtez/redémarrez-là...
 
-
-###Bonus:
 
 ##Exercice 7 (20 mins)
 
