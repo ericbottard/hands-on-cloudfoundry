@@ -1,3 +1,4 @@
+Note: Instructions in English are available [here](README.md)
 #HANDS ON CLOUDFOUNDRY
 
 ##Exercice 1 (Entre 5 et 30 mins)
