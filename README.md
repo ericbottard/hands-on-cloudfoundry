@@ -2,7 +2,7 @@ Note: Instructions in French are available [here](https://github.com/ericbottard
 
 #HANDS ON CLOUDFOUNDRY
 ##Exercise 1 (5 to 30 mins)
-Before starting this Hands On, here a some mandatory prerequisites needed to convey the rest of the exercises.
+Before starting this Hands On, here are some mandatory prerequisites needed to convey the rest of the exercises.
 ###VMC
 Run the `vmc` command in a terminal. If you get something like 
 ```bash   
@@ -12,7 +12,7 @@ please follow the next steps
 
 1. run `ruby -v` in a terminal. Version 1.9.x is preferred. If you don't have ruby, 
     * On windows : http://www.rubyinstaller.org
-    * On mac, you should have ruby. If that's not the case, https://rvm.io/ allows maintening several ruby runtimes in parallel
+    * On mac, you should have ruby. If that's not the case, https://rvm.io/ allows maintaining several ruby runtimes in parallel
     * On linux, use for example `apt` or https://rvm.io/
 1. Run `sudo gem install vmc -V`
 
@@ -85,10 +85,10 @@ Run
 
 ##Exercise 4 (15 mins)
 
-Starting with exercise 4, you can use code from https://github.com/ericbottard/hands-on-cloudfoundry as a working skeleton. Remove comments around pieces of code as you go from exercise to the next. Don't hesitate to fork the repo and tweet about your answers!
+Starting with exercise 4, you can use code from https://github.com/ericbottard/hands-on-cloudfoundry as a working skeleton. Remove comments around pieces of code as you go from one exercise to the next. Don't hesitate to fork the repo and tweet about your answers!
 
 1. Write a webapp that displays environment variables.
-2. Deploy it locally and the on CloudFoundry.
+2. Deploy it locally and on CloudFoundry.
 1. Have a look at variables named `VCAP_*`
 1. Create and bind a service to your app (even if it does not use it)
 1. See the contents of the `VCAP_SERVICES` variable?
@@ -137,7 +137,7 @@ Hint:
 
 1. Assuming you used `@Configuration` classes, get rid of the two datasources
 2. In the `context-ex7.xml` file, make room for 2 profiles: `default` and `cloud`
-3. Declare 2 local DataSources inside the `default` profile. You can use the `<jdbc:` namesplace
+3. Declare 2 local DataSources inside the `default` profile. You can use the `<jdbc: />` namesplace
 4. Thanks to the `<cloud:xxx />` namespace, Insert your 2 DataSources in the `cloud` profile
 
 ###Bonus:
