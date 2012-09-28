@@ -5,7 +5,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config/>
     <bean class="org.cloudfoundry.samples.handson.config.FrontConfig" />
-
+    <bean class="org.cloudfoundry.samples.handson.ex4.EnvVariablesController" />
+    <bean class="org.cloudfoundry.samples.handson.ex5.PersonController" />
+    <bean class="org.cloudfoundry.samples.handson.ex6.CopyController" />
+        
 </beans>

@@ -26,7 +26,6 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(value = "org.cloudfoundry.samples.handson", includeFilters = { @Filter(Controller.class) })
 public class FrontConfig extends WebMvcConfigurerAdapter {
 
 	/**

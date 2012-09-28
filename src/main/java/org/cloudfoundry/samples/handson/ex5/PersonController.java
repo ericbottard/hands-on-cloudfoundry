@@ -19,7 +19,12 @@ import java.util.List;
 public class PersonController {
 	
 	// TODO: configure the jdbcTemplate with an injected DataSource
-//	private JdbcTemplate jdbcTemplate;
+//	private NamedParameterJdbcTemplate jdbcTemplate;
+	
+	// @Inject
+//	public void setDataSource(DataSource dataSource) {
+//		this.jdbcTemplate = ...
+//	}
 	
 	@RequestMapping(value = "/ex5", method=RequestMethod.GET)
 	public ModelAndView show(Person command) {
