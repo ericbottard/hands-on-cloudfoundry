@@ -48,7 +48,7 @@ Si vous avez déjà téléchargé Micro cloudFoundry, faites le setup dès à pr
 
 ###Une appli en local (10 mins)
 1. Faites un clone de cette appli : https://github.com/ericbottard/spring-social-showcase
-1. Testez-la en local (`mvn tomcat:run` ou bien drag&drop dans STS sur vFabric tcServer)
+1. Testez-la en local (`mvn tomcat:run` ou bien "Import as Maven project" dans STS puis drag&drop sur un vFabric tcServer fraîchement configuré)
 
 ###Et dans les nuages (10 mins)
 1. Créez votre compte sur http://cloudfoundry.com ("Sign up for cloud foundry")
@@ -89,9 +89,10 @@ Faites
 
 A partir de l'exercice 4, vous pouvez vous appuyer sur le squelette disponible ici : 
 https://github.com/ericbottard/hands-on-cloudfoundry. Enlevez les commentaires autour du code au fur et à mesure. N'hésitez pas à forker le repo et à twitter vos solutions!
+Encore une fois, dans STS, pensez à importer le projet en tant que projet Maven.
 
 1. Ecrire une application web qui liste les variables d’environnement.
-2. Déployez en local puis sur CloudFoundry.
+1. Déployez en local puis sur CloudFoundry.
 1. Remarquez les variables nommées `VCAP_*`
 1. Créez et bindez un service à votre application (même si elle ne l'exploite pas)
 1. Remarquez la valeur de la variable `VCAP_SERVICES`
@@ -119,7 +120,9 @@ end
 
 Indices:
 
-- Spring permet de facilement créer une base embarquée grâce à `EmbeddedDatabaseFactory`
+- Spring permet de facilement créer une base embarquée grâce à `EmbeddedDatabaseFactory`.
+- Pour récupérer des personnes, utilisez `jdbcTemplate.query(sql, parameters, BeanPropertyRowMapper)`
+- Pour insérer des personnes, utilisez `jdbcTemplate.update(sql, new BeanPropertySqlParameterSource)`
 
 ###Bonus:
 Loggez ou affichez la classe de la `DataSource` qui vous est injectée. Quelle est la valeur en local? Sur CloudFoundry?

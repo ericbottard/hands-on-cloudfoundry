@@ -46,7 +46,7 @@ If you already downloaded Micro CloudFoundry, now would be a good time to set it
 
 ###Where we run an app locally... (10 mins)
 1. Clone this app : https://github.com/ericbottard/spring-social-showcase
-1. Test it locally (`mvn tomcat:run` or drag&drop it in STS on a vFabric tcServer)
+1. Test it locally (`mvn tomcat:run` or "Import as Maven project" in STS and drag&drop it on a newly created vFabric tcServer)
 
 ###...and in the clouds (10 mins)
 1. Create your http://cloudfoundry.com account ("Sign up for cloud foundry")
@@ -86,9 +86,10 @@ Run
 ##Exercise 4 (15 mins)
 
 Starting with exercise 4, you can use code from https://github.com/ericbottard/hands-on-cloudfoundry as a working skeleton. Remove comments around pieces of code as you go from one exercise to the next. Don't hesitate to fork the repo and tweet about your answers!
+Once again, import the cloned project as a Maven project in STS.
 
 1. Write a webapp that displays environment variables.
-2. Deploy it locally and on CloudFoundry.
+1. Deploy it locally and on CloudFoundry.
 1. Have a look at variables named `VCAP_*`
 1. Create and bind a service to your app (even if it does not use it)
 1. See the contents of the `VCAP_SERVICES` variable?
@@ -117,6 +118,8 @@ end
 Hints:
 
 - Spring allows you to easily create an embedded database thanks to `EmbeddedDatabaseFactory`
+- To retrieve persisted Persons, check `jdbcTemplate.query(sql, parameters, BeanPropertyRowMapper)` out
+- To store a new Person, check `jdbcTemplate.update(sql, new BeanPropertySqlParameterSource)` out
 
 ###Bonus:
 Log ou display the actual class of the `DataSource` that gets injected. What do you get locally? When running on CloudFoundry?
