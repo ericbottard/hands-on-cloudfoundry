@@ -21,6 +21,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
+import org.springframework.dao.DataAccessResourceFailureException;
 
 @Configuration
 public class Ex5Config {
@@ -34,9 +35,14 @@ public class Ex5Config {
 	
 	//@PostConstruct
 	public void databasePopulator() {
-		ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
-		populator.addScript(new ClassPathResource("schema.sql", Ex5Config.class));
-		DatabasePopulatorUtils.execute(populator, fromDataSource());
+      try {
+         ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
+         populator.addScript(new ClassPathResource("schema.sql", Ex5Config.class));
+         DatabasePopulatorUtils.execute(populator, fromDataSource());
+      }
+      catch(DataAccessResourceFailureException e) {
+         //ignore if table already exists
+      }
 	}
 
 }
