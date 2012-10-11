@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * This exercise shows what happens if you have two services of the same "kind"
  * (here two RDBMS {@link DataSource DataSources}) in your app. Uncomment the
- * injection part and add an second DataSource to your context and see it fail
+ * injection part and add a second DataSource to your context and see it fail
  * on CloudFoundry.
  * 
  * @author Eric Bottard
