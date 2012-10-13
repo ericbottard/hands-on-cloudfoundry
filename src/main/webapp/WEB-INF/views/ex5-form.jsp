@@ -76,9 +76,9 @@
             <c:otherwise>
                 <c:forEach items="${persons}" var="p">
                     <tr>
-                        <th>${p.firstName}</th>
-                        <th>${p.lastName}</th>
-                        <th>${p.age}</th>
+                        <th><c:out value="${p.firstName}" /></th>
+                        <th><c:out value="${p.lastName}" /></th>
+                        <th><c:out value="${p.age}" /></th>
                     </tr>
                 </c:forEach>
             </c:otherwise>
