@@ -1,4 +1,5 @@
 Note: Instructions in French are available [here](https://github.com/ericbottard/hands-on-cloudfoundry/blob/master/README.fr.md)
+Note: Instructions in Japanese are available [here](https://github.com/ericbottard/hands-on-cloudfoundry/blob/master/README.jp.md)
 
 #HANDS ON CLOUDFOUNDRY
 ##Exercise 1 (5 to 30 mins)
