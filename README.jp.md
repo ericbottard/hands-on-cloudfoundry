@@ -11,14 +11,14 @@ vmc: command not found
 次のステップに進みください。
 
 1. ターミナルで`ruby -v` を実行してください。Rubyバージョン1.9.2もしくは1.8.7が必要になります。Rubyのインストールは以下を参考にしてください。 
-    * windowsの場合、 http://www.rubyinstaller.orgを参照してください。
+    * windowsの場合、 http://www.rubyinstaller.org を参照してください。
     * Macの場合、デフォルトでRubyがインストールされているので, rvm（https://rvm.io/）を使ってvmcバージョンの動くrubyバージョンもインストールし同居させてください。
     * linuxの場合、 `apt` もしくは rvm（https://rvm.io/）を使ってインストールしてください。
 1. `sudo gem install vmc -V`を実行してください。
 
 ###SpringSource Tool Suite (STS)の場合
 
-1. http://www.springsource.org/spring-tool-suite-downloadにブラウザアクセスしてください。
+1. http://www.springsource.org/spring-tool-suite-download にブラウザアクセスしてください。
 1. バージョン3.0.0以降をダウンロードしてください。
 1. unzip後、インストーラを起動し、環境に応じて各オプションの設定を行ってください。
 
@@ -31,7 +31,7 @@ STSの`Help > About`で、CloudFoundryのiconがないこを確認する。
 
 ###Gitツールのインストール
 
-1. http://git-scm.com/downloadsにブラウザアクセスをしてください。
+1. http://git-scm.com/downloads にブラウザアクセスをしてください。
 1. このブラウザの説明に従って'Git'をインストールしてください。
 
 ###Mavenのインストール 
@@ -45,11 +45,11 @@ STSの`Help > About`で、CloudFoundryのiconがないこを確認する。
 ##実習 2 (20分)
 
 ###Wローカル環境でのアプリケーション動作 (10分)
-1. https://github.com/ericbottard/spring-social-showcaseからGit Cloneコマンドにてアプリケーションをコピーしてください。
+1. https://github.com/ericbottard/spring-social-showcase からGit Cloneコマンドにてアプリケーションをコピーしてください。
 1. ローカル環境でテストしてください。 (`mvn tomcat:run` もしは STSにて"Import as Maven project"を実行し、新しく作成したvFabric tcServerにドラック＆ドロップしてください。
 
 ###.クラウド環境でのアプリケーション動作(10分)
-1.  http://cloudfoundry.comでアカウント作成("Sign up for cloud foundry")
+1.  http://cloudfoundry.com でアカウント作成 ("Sign up for cloud foundry")
     1. emailアドレスがアカウントになります。
     1. サインアップ後、送られてきたemailにパスワードが記述されています。パスワードは変更可能です。
     1. サインアップ時には、本セッションで割り当てられたプロモートコードを利用してください。
@@ -85,7 +85,7 @@ STSの`Help > About`で、CloudFoundryのiconがないこを確認する。
 
 ##実習 4 (15分)
 
-実習4を始めるにあたり、https://github.com/ericbottard/hands-on-cloudfoundryのコードをコピーしてスケルトンとしてご利用ください。いくつかコードがコメントアウトされているとこは、コメントを削除し、次のステップに進んでください。わからないところは、遠慮なくRepoやTwitterを使って質問してください。
+実習4を始めるにあたり、https://github.com/ericbottard/hands-on-cloudfoundry のコードをコピーしてスケルトンとしてご利用ください。いくつかコードがコメントアウトされているとこは、コメントを削除し、次のステップに進んでください。わからないところは、遠慮なくRepoやTwitterを使って質問してください。
 もう一度、STSを使ってコピーされたプロジェクトをMavenプロジェクトとしてインポートします。
 
 1. 環境変数を表示するwebアプリを作成します。。
