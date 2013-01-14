@@ -45,8 +45,8 @@ public class PersonController {
 	public ModelAndView show(Person command) {
 		ModelAndView mav = new ModelAndView("ex5-form");
 		
-		// TODO: retrieve persons and add them to the model
-		// under key "persons"
+		// TODO: retrieve persons and add them to the model under key "persons"
+		// cf. jdbcTemplate.query(sql, parameters, BeanPropertyRowMapper)
 		List<Person> persons = null;
 		mav.addObject("persons", persons);
 		
@@ -56,7 +56,7 @@ public class PersonController {
 	public String add(Person person, Errors errors, RedirectAttributes redirectAttributes) {
 		
 		// TODO: save the person POJO in the db using a JdbcTemplate
-		
+		// cf. jdbcTemplate.update(sql, new BeanPropertySqlParameterSource)
 		return "redirect:/ex5";
 	}
 

@@ -29,7 +29,7 @@ public class Ex5Config {
 	//@Bean
 	public DataSource fromDataSource() {
 		// TODO
-		
+		// cf. EmbeddedDatabaseFactory ;)		
 		return null;
 	}
 	
