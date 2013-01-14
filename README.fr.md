@@ -85,11 +85,11 @@ Faites
 
 ##Exercice 4 (15 mins)
 
-A partir de l'exercice 4, vous pouvez vous appuyer sur le squelette disponible ici : 
+À partir de l'exercice 4, vous pouvez vous appuyer sur le squelette disponible ici : 
 https://github.com/ericbottard/hands-on-cloudfoundry. Enlevez les commentaires autour du code au fur et à mesure. N'hésitez pas à forker le repo et à twitter vos solutions!
 Encore une fois, dans STS, pensez à importer le projet en tant que projet Maven.
 
-1. Ecrire une application web qui liste les variables d’environnement.
+1. Écrire une application web qui liste les variables d’environnement.
 1. Déployez en local puis sur CloudFoundry.
 1. Remarquez les variables nommées `VCAP_*`
 1. Créez et bindez un service à votre application (même si elle ne l'exploite pas)
