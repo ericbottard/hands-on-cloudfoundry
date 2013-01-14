@@ -73,10 +73,8 @@ Supprimez l’application et le service puis redéployez-la *via* STS
 Faites
 
  * `vmc apps` (constatez)
- * `vmc instances` *le_nom_de_votre_appli* `+1`
+ * `vmc scale` *le_nom_de_votre_appli*
  * `vmc services` (constatez)
- * `vmc runtimes`
- * `vmc frameworks`
  * `vmc stats` *le_nom_de_votre_appli*
  * `vmc logs` *le_nom_de_votre_appli*
  * `vmc help`

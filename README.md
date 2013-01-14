@@ -72,10 +72,8 @@ Delete the app and its service and deploy it again, using STS
 Run
 
  * `vmc apps` (what do you get?)
- * `vmc instances` *your_app_name* `+1`
+ * `vmc scale` *your_app_name*
  * `vmc services` (what do you get?)
- * `vmc runtimes`
- * `vmc frameworks`
  * `vmc stats` *your_app_name*
  * `vmc logs` *your_app_name*
  * `vmc help`

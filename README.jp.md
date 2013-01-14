@@ -71,10 +71,8 @@ STSの`Help > About`で、CloudFoundryのiconがないこを確認する。
 以下のコマンドを実行してください。
 
  * `vmc apps` (展開されているアプリケーション名の表示)
- * `vmc instances` *your_app_name* `+1`
+ * `vmc scale` *your_app_name* 
  * `vmc services` (利用可能なサービス名の表示)
- * `vmc runtimes`
- * `vmc frameworks`
  * `vmc stats` *your_app_name*
  * `vmc logs` *your_app_name*
  * `vmc help`
