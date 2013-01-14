@@ -121,7 +121,7 @@ Hints:
 - To store a new Person, check `jdbcTemplate.update(sql, new BeanPropertySqlParameterSource)` out
 
 ###Bonus:
-Log ou display the actual class of the `DataSource` that gets injected. What do you get locally? When running on CloudFoundry?
+Log or display the actual class of the `DataSource` that gets injected. What do you get locally? When running on CloudFoundry?
 
 ##Exercise 6 (15 mins)
 
