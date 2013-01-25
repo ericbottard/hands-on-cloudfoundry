@@ -53,6 +53,7 @@ public class PersonController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/ex5", method=RequestMethod.POST)
 	public String add(Person person, Errors errors, RedirectAttributes redirectAttributes) {
 		
 		// TODO: save the person POJO in the db using a JdbcTemplate
